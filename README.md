@@ -155,20 +155,13 @@
 | LLM API | 通义千问 / DeepSeek 等 OpenAI 兼容接口 |
 | 业务后端 | 电商模拟后端（订单/商品 API，默认 `http://127.0.0.1:18081`） |
 
-### 1. 克隆项目
-
-```bash
-git clone <你的仓库地址>
-cd customer-service-backend
-```
-
-### 2. 创建虚拟环境并安装依赖
+### 2. 虚拟环境并安装依赖
 
 ```bash
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
-# Linux / macOS
+# Linux
 source .venv/bin/activate
 
 pip install fastapi uvicorn langchain langchain-openai sqlalchemy aiomysql pymysql httpx pydantic pydantic-settings jinja2 pyyaml
@@ -186,9 +179,6 @@ CREATE TABLE dialogue_states (
 ```
 
 ### 4. 配置环境变量
-
-复制 `.env` 并按本机填写：
-
 ```ini
 # ====== LLM 配置 ======
 LLM_MODEL=qwen-plus
